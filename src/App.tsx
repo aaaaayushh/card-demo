@@ -58,8 +58,8 @@ function App() {
   return (
     <div className="flex flex-wrap justify-center bg-[#14172b] h-full">
 
-      {data.map((card)=>(
-        <div className="w-full sm:w-5/12 md:w-4/12 lg:w-3/12 2xl:w-2/12 mx-8">
+      {data.map((card,id)=>(
+        <div key={id} className="w-full sm:w-5/12 md:w-4/12 lg:w-3/12 2xl:w-2/12 mx-8">
           <Card coinName={card.coinName} currChange={card.currChange} currPrice={card.currPrice} tvl={card.tvl} pairs={card.pairs} coinImg={card.coinImg} />
         </div>
       ))}

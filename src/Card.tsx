@@ -27,8 +27,8 @@ function Card({coinName,currPrice,currChange,tvl,pairs,coinImg} : CardProps){
                 </div>
                 <p className="text-[#737BAE] font-semibold text-center mt-2 mb-4">TVL</p>
                 <div className="bg-[#14172b] w-full md:w-3/5 flex mx-auto justify-center rounded-[17px]">
-                    {pairs.map((pair)=>
-                        <img className="mx-auto w-8 py-2 " src={`${pair}.png`}/>
+                    {pairs.map((pair,id)=>
+                        <img key={id} className="mx-auto w-8 py-2 " src={`${pair}.png`}/>
                     )}
                 </div>
                 <p className="text-[#737BAE] font-semibold text-center mt-2">Popular Pairs</p>
